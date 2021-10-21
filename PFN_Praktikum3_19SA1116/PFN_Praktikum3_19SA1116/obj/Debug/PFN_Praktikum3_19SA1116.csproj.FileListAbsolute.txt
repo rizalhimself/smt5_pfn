@@ -1,0 +1,10 @@
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\bin\Debug\PFN_Praktikum3_19SA1116.exe.config
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\bin\Debug\PFN_Praktikum3_19SA1116.exe
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\bin\Debug\PFN_Praktikum3_19SA1116.pdb
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.csproj.AssemblyReference.cache
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.frmBarang.resources
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.Properties.Resources.resources
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.csproj.GenerateResource.cache
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.csproj.CoreCompileInputs.cache
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.exe
+Z:\Documents\Pemrograman\SMT5\Pemrograman Framework\PFN_Praktikum3_19SA1116\PFN_Praktikum3_19SA1116\obj\Debug\PFN_Praktikum3_19SA1116.pdb
