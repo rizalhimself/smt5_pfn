@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbAppKrs" Class="linqdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.56.1;Initial Catalog=dbAppKrs;Persist Security Info=True;User ID=sa" SettingsObjectName="UTS_KRS.Properties.Settings" SettingsPropertyName="dbAppKrsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.krs" Member="krs">
+    <Type Name="kr">
+      <Column Name="idKrs" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nim" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kdmakul" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="mahasiswa_kr" Member="mahasiswa" ThisKey="nim" OtherKey="nim" Type="mahasiswa" IsForeignKey="true" />
+      <Association Name="makul_kr" Member="makul" ThisKey="kdmakul" OtherKey="kdmakul" Type="makul" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mahasiswa" Member="mahasiswas">
+    <Type Name="mahasiswa">
+      <Column Name="nim" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="namaMahasiswa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prodi" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="mahasiswa_kr" Member="krs" ThisKey="nim" OtherKey="nim" Type="kr" />
+    </Type>
+  </Table>
+  <Table Name="dbo.makul" Member="makuls">
+    <Type Name="makul">
+      <Column Name="kdmakul" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nmMakul" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="semester" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bobotsks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="makul_kr" Member="krs" ThisKey="kdmakul" OtherKey="kdmakul" Type="kr" />
+    </Type>
+  </Table>
+</Database>

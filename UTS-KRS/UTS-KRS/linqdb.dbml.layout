@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqdb">
+  <DataContextMoniker Name="/linqdbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="030762ff-6b4e-4ffb-9c1b-4c0a440cf3af" absoluteBounds="4.375, 1.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqdbDataContext/kr" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16b451d3-ccd9-4c82-b14b-1b20fb9e3355" absoluteBounds="4.39, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a96f98e6-a65b-47ab-9110-5ddf231f4e4e" absoluteBounds="1.5, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqdbDataContext/mahasiswa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc4f8192-c861-4f23-9b15-483f51a211a1" absoluteBounds="1.5149999999999997, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 2.38064697265625); (3.85416416666667 : 2.38064697265625 : JumpStart); (4.02083083333333 : 2.38064697265625 : JumpEnd); (4.375 : 2.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqdbDataContext/mahasiswa/mahasiswa_kr" />
+      <nodes>
+        <classShapeMoniker Id="a96f98e6-a65b-47ab-9110-5ddf231f4e4e" />
+        <classShapeMoniker Id="030762ff-6b4e-4ffb-9c1b-4c0a440cf3af" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a5578aba-0d06-4a0f-bafd-a59f6b5d3f2b" absoluteBounds="2.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/linqdbDataContext/makul" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18670828-3a64-45f1-b6eb-09aa39418d68" absoluteBounds="2.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.9374975 : 3.875); (3.9374975 : 1.65625); (4.375 : 1.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqdbDataContext/makul/makul_kr" />
+      <nodes>
+        <classShapeMoniker Id="a5578aba-0d06-4a0f-bafd-a59f6b5d3f2b" />
+        <classShapeMoniker Id="030762ff-6b4e-4ffb-9c1b-4c0a440cf3af" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

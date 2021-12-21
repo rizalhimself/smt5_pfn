@@ -1,0 +1,10 @@
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\bin\Debug\UTS-KRS.exe.config
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\bin\Debug\UTS-KRS.exe
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\bin\Debug\UTS-KRS.pdb
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.csproj.AssemblyReference.cache
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS_KRS.Form1.resources
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS_KRS.Properties.Resources.resources
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.csproj.GenerateResource.cache
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.csproj.CoreCompileInputs.cache
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.exe
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.pdb
