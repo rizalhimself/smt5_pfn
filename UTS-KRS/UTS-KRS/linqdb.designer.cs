@@ -108,6 +108,8 @@ namespace UTS_KRS
 		
 		private int _kdmakul;
 		
+		private string _status;
+		
 		private EntityRef<mahasiswa> _mahasiswa;
 		
 		private EntityRef<makul> _makul;
@@ -122,6 +124,8 @@ namespace UTS_KRS
     partial void OnnimChanged();
     partial void OnkdmakulChanging(int value);
     partial void OnkdmakulChanged();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
     #endregion
 		
 		public kr()
@@ -131,7 +135,7 @@ namespace UTS_KRS
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKrs", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKrs", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int idKrs
 		{
 			get
@@ -195,6 +199,26 @@ namespace UTS_KRS
 					this._kdmakul = value;
 					this.SendPropertyChanged("kdmakul");
 					this.OnkdmakulChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(20)")]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
 				}
 			}
 		}
@@ -300,6 +324,12 @@ namespace UTS_KRS
 		
 		private string _prodi;
 		
+		private string _dosbing;
+		
+		private System.Nullable<int> _angkatan;
+		
+		private string _status;
+		
 		private EntitySet<kr> _krs;
 		
     #region Extensibility Method Definitions
@@ -312,6 +342,12 @@ namespace UTS_KRS
     partial void OnnamaMahasiswaChanged();
     partial void OnprodiChanging(string value);
     partial void OnprodiChanged();
+    partial void OndosbingChanging(string value);
+    partial void OndosbingChanged();
+    partial void OnangkatanChanging(System.Nullable<int> value);
+    partial void OnangkatanChanged();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
     #endregion
 		
 		public mahasiswa()
@@ -380,6 +416,66 @@ namespace UTS_KRS
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dosbing", DbType="VarChar(50)")]
+		public string dosbing
+		{
+			get
+			{
+				return this._dosbing;
+			}
+			set
+			{
+				if ((this._dosbing != value))
+				{
+					this.OndosbingChanging(value);
+					this.SendPropertyChanging();
+					this._dosbing = value;
+					this.SendPropertyChanged("dosbing");
+					this.OndosbingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_angkatan", DbType="Int")]
+		public System.Nullable<int> angkatan
+		{
+			get
+			{
+				return this._angkatan;
+			}
+			set
+			{
+				if ((this._angkatan != value))
+				{
+					this.OnangkatanChanging(value);
+					this.SendPropertyChanging();
+					this._angkatan = value;
+					this.SendPropertyChanged("angkatan");
+					this.OnangkatanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(20)")]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="mahasiswa_kr", Storage="_krs", ThisKey="nim", OtherKey="nim")]
 		public EntitySet<kr> krs
 		{
@@ -440,6 +536,8 @@ namespace UTS_KRS
 		
 		private int _bobotsks;
 		
+		private string _dosenpengampu;
+		
 		private EntitySet<kr> _krs;
 		
     #region Extensibility Method Definitions
@@ -454,6 +552,8 @@ namespace UTS_KRS
     partial void OnsemesterChanged();
     partial void OnbobotsksChanging(int value);
     partial void OnbobotsksChanged();
+    partial void OndosenpengampuChanging(string value);
+    partial void OndosenpengampuChanged();
     #endregion
 		
 		public makul()
@@ -538,6 +638,26 @@ namespace UTS_KRS
 					this._bobotsks = value;
 					this.SendPropertyChanged("bobotsks");
 					this.OnbobotsksChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dosenpengampu", DbType="VarChar(50)")]
+		public string dosenpengampu
+		{
+			get
+			{
+				return this._dosenpengampu;
+			}
+			set
+			{
+				if ((this._dosenpengampu != value))
+				{
+					this.OndosenpengampuChanging(value);
+					this.SendPropertyChanging();
+					this._dosenpengampu = value;
+					this.SendPropertyChanged("dosenpengampu");
+					this.OndosenpengampuChanged();
 				}
 			}
 		}

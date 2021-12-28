@@ -1,7 +1,7 @@
 ﻿
 namespace UTS_KRS
 {
-    partial class Form1
+    partial class FormKrs
     {
         /// <summary>
         /// Required designer variable.
@@ -151,6 +151,7 @@ namespace UTS_KRS
             this.btHapus.TabIndex = 8;
             this.btHapus.Text = "Hapus";
             this.btHapus.UseVisualStyleBackColor = true;
+            this.btHapus.Click += new System.EventHandler(this.btHapus_Click);
             // 
             // btTambah
             // 
@@ -160,6 +161,7 @@ namespace UTS_KRS
             this.btTambah.TabIndex = 10;
             this.btTambah.Text = "Tambah";
             this.btTambah.UseVisualStyleBackColor = true;
+            this.btTambah.Click += new System.EventHandler(this.btTambah_Click);
             // 
             // btTotPemb
             // 
@@ -169,6 +171,7 @@ namespace UTS_KRS
             this.btTotPemb.TabIndex = 11;
             this.btTotPemb.Text = "Total Pembayaran";
             this.btTotPemb.UseVisualStyleBackColor = true;
+            this.btTotPemb.Click += new System.EventHandler(this.btTotPemb_Click);
             // 
             // dgv1
             // 

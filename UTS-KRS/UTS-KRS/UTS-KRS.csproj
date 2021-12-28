@@ -47,18 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbAppKrsDataSet.Designer.cs">
+    <Compile Include="dbAppKrsDataSet1.cs">
+      <DependentUpon>dbAppKrsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbAppKrsDataSet1.Designer.cs">
+      <DependentUpon>dbAppKrsDataSet1.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dbAppKrsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormKrs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormKrs.Designer.cs">
+      <DependentUpon>FormKrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPembayaran.Designer.cs">
+      <DependentUpon>FormPembayaran.cs</DependentUpon>
     </Compile>
     <Compile Include="Koneksi.cs" />
+    <Compile Include="linqdb.cs">
+      <DependentUpon>linqdb.dbml</DependentUpon>
+    </Compile>
     <Compile Include="linqdb.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,8 +78,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormKrs.resx">
+      <DependentUpon>FormKrs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,16 +90,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="dbAppKrsDataSet.xsc">
-      <DependentUpon>dbAppKrsDataSet.xsd</DependentUpon>
+    <None Include="dbAppKrsDataSet1.xsc">
+      <DependentUpon>dbAppKrsDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="dbAppKrsDataSet.xsd">
+    <None Include="dbAppKrsDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbAppKrsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbAppKrsDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dbAppKrsDataSet.xss">
-      <DependentUpon>dbAppKrsDataSet.xsd</DependentUpon>
+    <None Include="dbAppKrsDataSet1.xss">
+      <DependentUpon>dbAppKrsDataSet1.xsd</DependentUpon>
     </None>
     <None Include="linqdb.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
