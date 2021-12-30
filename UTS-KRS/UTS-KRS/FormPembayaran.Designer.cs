@@ -180,6 +180,7 @@ namespace UTS_KRS
             this.btBatal.TabIndex = 14;
             this.btBatal.Text = "Batal";
             this.btBatal.UseVisualStyleBackColor = true;
+            this.btBatal.Click += new System.EventHandler(this.btBatal_Click);
             // 
             // btAktivasi
             // 
@@ -189,6 +190,7 @@ namespace UTS_KRS
             this.btAktivasi.TabIndex = 15;
             this.btAktivasi.Text = "Aktivasi";
             this.btAktivasi.UseVisualStyleBackColor = true;
+            this.btAktivasi.Click += new System.EventHandler(this.btAktivasi_Click);
             // 
             // groupBox2
             // 

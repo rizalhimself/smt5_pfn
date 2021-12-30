@@ -16,12 +16,10 @@ namespace UTS_KRS
         public FormPembayaran()
         {
             InitializeComponent();
-            
         }
 
         linqdbDataContext db = new linqdbDataContext();
         XDocument xmldoc = XDocument.Load("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
-        
 
         private void FormPembayaran_Load(object sender, EventArgs e)
         {
@@ -32,7 +30,7 @@ namespace UTS_KRS
             bacaDataXmlKelas();
         }
 
-        public void bacaDataXmlKelas ()
+        public void bacaDataXmlKelas()
         {
             var res = from c in xmldoc.Element("Pembayarans").Descendants("Pembayaran")
                       select c.Element("kelas_perkuliahan").Value;
@@ -43,12 +41,12 @@ namespace UTS_KRS
         {
             string KelasPerkuliahan = cbKelasPerkuliahan.SelectedValue.ToString();
             var bg = (from kp in xmldoc.Element("Pembayarans").Descendants("Pembayaran")
-                      where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan 
+                      where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan
                       select kp.Element("uang_gedung").Value).First();
             etByGd.Text = bg.ToString();
             var ba = (from kp in xmldoc.Element("Pembayarans").Descendants("Pembayaran")
-                     where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan
-                     select kp.Element("biaya_admin").Value).First();
+                      where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan
+                      select kp.Element("biaya_admin").Value).First();
             etAdm.Text = ba.ToString();
             HitungBayarKRS();
         }
@@ -58,8 +56,8 @@ namespace UTS_KRS
             int jmsks, bg, ba, sks, subtotal, total;
             string KelasPerkuliahan = cbKelasPerkuliahan.SelectedValue.ToString();
             var psks = (from kp in xmldoc.Element("Pembayarans").Descendants("Pembayaran")
-                      where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan
-                      select kp.Element("hargapersks").Value).First();
+                        where kp.Element("kelas_perkuliahan").Value == KelasPerkuliahan
+                        select kp.Element("hargapersks").Value).First();
             sks = Convert.ToInt32(psks);
             jmsks = Convert.ToInt32(etJmSks.Text);
             bg = Convert.ToInt32(etByGd.Text);
@@ -68,6 +66,29 @@ namespace UTS_KRS
             total = subtotal + (bg + ba);
             etSubTot.Text = subtotal.ToString();
             etTotPemb.Text = total.ToString();
+            generateToken();
+        }
+
+        private void generateToken()
+        {
+            byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
+            byte[] key = Guid.NewGuid().ToByteArray();
+            string token = Convert.ToBase64String(time.Concat(key).ToArray());
+            etKodePembayaran.Text = token;
+        }
+
+        private void btAktivasi_Click(object sender, EventArgs e)
+        {
+            if (etKdAktv.Text == etKodePembayaran.Text)
+            {
+                string aktif = "teraktivasi";
+              
+            }
+        }
+
+        private void btBatal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

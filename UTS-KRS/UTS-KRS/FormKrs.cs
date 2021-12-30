@@ -84,8 +84,6 @@ namespace UTS_KRS
                 dgv1.DataSource = dataTable;
                 MessageBox.Show("NIM ditemukan!");
                 cbBinding();
-
-
             }
         }
 
@@ -112,18 +110,22 @@ namespace UTS_KRS
 
         private void btTambah_Click(object sender, EventArgs e)
         {
-            if ((from r in db.krs where r.kdmakul == 
-                        (from q in db.makuls where q.nmMakul == Convert.ToString(cbMakul.SelectedValue) 
-                         select q.kdmakul).First() 
-                        select r).Count() > 0)
+            if ((from r in db.krs
+                 where r.kdmakul ==
+       (from q in db.makuls
+        where q.nmMakul == Convert.ToString(cbMakul.SelectedValue)
+        select q.kdmakul).First()
+                 select r).Count() > 0)
             {
                 MessageBox.Show("Data sudah ada!");
 
-            } else if (etJmlKredit.Text == "")
+            }
+            else if (etJmlKredit.Text == "")
             {
                 MessageBox.Show("Silahkan Cari Data KRS Dulu");
 
-            } else
+            }
+            else
             {
                 var kmakul = (from p in db.makuls where p.nmMakul == Convert.ToString(cbMakul.SelectedValue) select p.kdmakul).First();
                 int kdmakul = kmakul, nim = Convert.ToInt32(etNIM.Text);
@@ -147,7 +149,7 @@ namespace UTS_KRS
         private void btHapus_Click(object sender, EventArgs e)
         {
             bool makcheck = (from ck in db.krs where ck.kdmakul == (from cm in db.makuls where cm.nmMakul == cbMakul.SelectedValue.ToString() select cm.kdmakul).First() select ck).Any();
-            if (cbMakul.SelectedItem == null || makcheck == false )
+            if (cbMakul.SelectedItem == null || makcheck == false)
             {
                 MessageBox.Show("Makul tidak ada atau belum ada!");
             }
@@ -161,7 +163,7 @@ namespace UTS_KRS
                 MessageBox.Show("Data berhasil dihapus!");
                 tampilDataKrs();
             };
-            
+
         }
 
         private void btTotPemb_Click(object sender, EventArgs e)
@@ -170,7 +172,7 @@ namespace UTS_KRS
             nilaiNIM = etNIM.Text;
             FormPembayaran pembayaran = new FormPembayaran();
             pembayaran.ShowDialog();
-            
+
         }
 
         private void simpanDataXml()
@@ -184,10 +186,11 @@ namespace UTS_KRS
                 new XElement("nim", etNIM.Text),
                 new XElement("total_sks", jmk.ToString()),
                 new XElement("tanggl_pemb", "null"),
+                new XElement("kd_aktivasi","null"),
                 new XElement("status", "Belum Tervalidasi"));
                 xmldoc.Root.Add(dbuff);
                 xmldoc.Save(path);
-            } 
+            }
 
         }
     }
