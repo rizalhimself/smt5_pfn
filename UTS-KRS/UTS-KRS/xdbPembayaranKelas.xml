@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pembayarans>
+  <Pembayaran>
+    <kelas_perkuliahan>Kelas Pagi</kelas_perkuliahan>
+    <hargapersks>50000</hargapersks>
+    <uang_gedung>1500000</uang_gedung>
+    <biaya_admin>200000</biaya_admin>
+  </Pembayaran>
+  <Pembayaran>
+    <kelas_perkuliahan>Kelas Sore</kelas_perkuliahan>
+    <hargapersks>100000</hargapersks>
+    <uang_gedung>2000000</uang_gedung>
+    <biaya_admin>250000</biaya_admin>
+  </Pembayaran>
+  <DetailKrs>
+    <nim>1911116</nim>
+    <total_sks>11</total_sks>
+    <tanggl_pemb>null</tanggl_pemb>
+    <status>Belum Tervalidasi</status>
+  </DetailKrs>
+</Pembayarans>

@@ -8,3 +8,4 @@ Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UT
 Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.exe
 Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS-KRS.pdb
 Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS_KRS.FormKrs.resources
+Y:\Documents\Pemrograman\SMT5\Pemrograman Framework\UTS-KRS\UTS-KRS\obj\Debug\UTS_KRS.FormPembayaran.resources

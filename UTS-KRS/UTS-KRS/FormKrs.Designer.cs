@@ -169,7 +169,7 @@ namespace UTS_KRS
             this.btTotPemb.Name = "btTotPemb";
             this.btTotPemb.Size = new System.Drawing.Size(217, 39);
             this.btTotPemb.TabIndex = 11;
-            this.btTotPemb.Text = "Total Pembayaran";
+            this.btTotPemb.Text = "Pembayaran dan Aktivasi";
             this.btTotPemb.UseVisualStyleBackColor = true;
             this.btTotPemb.Click += new System.EventHandler(this.btTotPemb_Click);
             // 
@@ -181,7 +181,7 @@ namespace UTS_KRS
             this.dgv1.Size = new System.Drawing.Size(542, 342);
             this.dgv1.TabIndex = 12;
             // 
-            // Form1
+            // FormKrs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,7 +191,7 @@ namespace UTS_KRS
             this.Controls.Add(this.btTambah);
             this.Controls.Add(this.btHapus);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "FormKrs";
             this.Text = "Edit Data KRS";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

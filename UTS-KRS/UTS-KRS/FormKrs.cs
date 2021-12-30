@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace UTS_KRS
 {
@@ -18,7 +19,10 @@ namespace UTS_KRS
             InitializeComponent();
         }
 
+        public static string nilaiNIM;
+
         linqdbDataContext db = new linqdbDataContext();
+        XDocument xmldoc = XDocument.Load("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
 
         private void tampilDataKrs()
         {
@@ -162,8 +166,29 @@ namespace UTS_KRS
 
         private void btTotPemb_Click(object sender, EventArgs e)
         {
+            simpanDataXml();
+            nilaiNIM = etNIM.Text;
             FormPembayaran pembayaran = new FormPembayaran();
-            pembayaran.ShowDialog();        
+            pembayaran.ShowDialog();
+            
+        }
+
+        private void simpanDataXml()
+        {
+            string path = "Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml";
+            var jmk = (from j in db.krs join k in db.makuls on j.kdmakul equals k.kdmakul where j.nim == Convert.ToInt32(etNIM.Text) select k.bobotsks).Sum();
+            bool nimcheck = (from c in xmldoc.Element("Pembayarans").Descendants("DetailKrs") where c.Element("nim").Value == etNIM.Text select c).Any();
+            if (nimcheck == false)
+            {
+                XElement dbuff = new XElement("DetailKrs",
+                new XElement("nim", etNIM.Text),
+                new XElement("total_sks", jmk.ToString()),
+                new XElement("tanggl_pemb", "null"),
+                new XElement("status", "Belum Tervalidasi"));
+                xmldoc.Root.Add(dbuff);
+                xmldoc.Save(path);
+            } 
+
         }
     }
 }
