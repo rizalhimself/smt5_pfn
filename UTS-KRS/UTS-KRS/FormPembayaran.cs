@@ -81,8 +81,19 @@ namespace UTS_KRS
         {
             if (etKdAktv.Text == etKodePembayaran.Text)
             {
-                string aktif = "teraktivasi";
-              
+                string aktif = "Teraktivasi", valid = "Tervalidasi";
+                var status = (from s in db.krs where s.nim == Convert.ToInt32(FormKrs.nilaiNIM) select s).ToList();
+                status.ForEach(g => g.status = aktif);
+                db.SubmitChanges();
+                var statusV = (from t in xmldoc.Element("Pembayarans").Descendants("DetailKrs")
+                               where t.Element("nim").Value == FormKrs.nilaiNIM
+                               select t.Element("status")).FirstOrDefault();
+                statusV.SetValue(valid);
+                MessageBox.Show("KRS teraktivasi!");
+                this.Close();
+            } else
+            {
+                MessageBox.Show("Kode Aktivasi salah!");
             }
         }
 
