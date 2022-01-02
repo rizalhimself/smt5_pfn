@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace UTS_KRS
@@ -186,7 +181,7 @@ namespace UTS_KRS
                 new XElement("nim", etNIM.Text),
                 new XElement("total_sks", jmk.ToString()),
                 new XElement("tanggl_pemb", "null"),
-                new XElement("kd_aktivasi","null"),
+                new XElement("kd_aktivasi", "null"),
                 new XElement("status", "Belum Tervalidasi"));
                 xmldoc.Root.Add(dbuff);
                 xmldoc.Save(path);

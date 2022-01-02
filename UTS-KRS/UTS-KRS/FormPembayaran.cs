@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -95,7 +90,8 @@ namespace UTS_KRS
                 xmldoc.Save("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
                 MessageBox.Show("KRS Teraktivasi");
                 this.Close();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Kode Aktivasi salah!");
             }
