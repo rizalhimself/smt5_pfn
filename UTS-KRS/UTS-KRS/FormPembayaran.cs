@@ -81,15 +81,19 @@ namespace UTS_KRS
         {
             if (etKdAktv.Text == etKodePembayaran.Text)
             {
-                string aktif = "Teraktivasi", valid = "Tervalidasi";
+                string aktif = "Teraktivasi", valid = "Tervalidasi",
+                    DateTime = System.DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
                 var status = (from s in db.krs where s.nim == Convert.ToInt32(FormKrs.nilaiNIM) select s).ToList();
                 status.ForEach(g => g.status = aktif);
                 db.SubmitChanges();
                 var statusV = (from t in xmldoc.Element("Pembayarans").Descendants("DetailKrs")
                                where t.Element("nim").Value == FormKrs.nilaiNIM
-                               select t.Element("status")).FirstOrDefault();
-                statusV.SetValue(valid);
-                MessageBox.Show("KRS teraktivasi!");
+                               select t).FirstOrDefault();
+                statusV.Element("status").SetValue(valid);
+                statusV.Element("tanggl_pemb").SetValue(DateTime);
+                statusV.Element("kd_aktivasi").SetValue(etKdAktv.Text);
+                xmldoc.Save("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
+                MessageBox.Show("KRS Teraktivasi");
                 this.Close();
             } else
             {
