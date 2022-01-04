@@ -15,8 +15,15 @@
   <DetailKrs>
     <nim>1911116</nim>
     <total_sks>11</total_sks>
-    <tanggl_pemb>02-01-2022 14:46:47</tanggl_pemb>
-    <kd_aktivasi>bp//9cPN2Uh4I+jMYPJjQ6lvybUcMHHp</kd_aktivasi>
+    <tanggl_pemb>04-01-2022 11:35:29</tanggl_pemb>
+    <kd_aktivasi>MmBMnTvP2UgKGjQG4C6ySKOxM3XPtWyx</kd_aktivasi>
     <status>Tervalidasi</status>
+  </DetailKrs>
+  <DetailKrs>
+    <nim>1911145</nim>
+    <total_sks>3</total_sks>
+    <tanggl_pemb>null</tanggl_pemb>
+    <kd_aktivasi>null</kd_aktivasi>
+    <status>Belum Tervalidasi</status>
   </DetailKrs>
 </Pembayarans>

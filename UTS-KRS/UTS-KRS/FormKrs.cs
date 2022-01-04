@@ -21,7 +21,7 @@ namespace UTS_KRS
 
         private void tampilDataKrs()
         {
-            var krsMahasiswa = from km in db.krs
+            var krsMahasiswa = from km in db.krs where km.nim == Convert.ToInt32(etNIM.Text)
                                join dm in db.makuls on km.kdmakul equals dm.kdmakul
                                select new
                                {
@@ -109,7 +109,7 @@ namespace UTS_KRS
                  where r.kdmakul ==
        (from q in db.makuls
         where q.nmMakul == Convert.ToString(cbMakul.SelectedValue)
-        select q.kdmakul).First()
+        select q.kdmakul).First() && r.nim == Convert.ToInt32(etNIM.Text)
                  select r).Count() > 0)
             {
                 MessageBox.Show("Data sudah ada!");

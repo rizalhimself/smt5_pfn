@@ -13,8 +13,9 @@ namespace UTS_KRS
             InitializeComponent();
         }
 
+        public static string Xpath = ("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
         linqdbDataContext db = new linqdbDataContext();
-        XDocument xmldoc = XDocument.Load("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
+        XDocument xmldoc = XDocument.Load(Xpath);
 
         private void FormPembayaran_Load(object sender, EventArgs e)
         {
@@ -87,7 +88,7 @@ namespace UTS_KRS
                 statusV.Element("status").SetValue(valid);
                 statusV.Element("tanggl_pemb").SetValue(DateTime);
                 statusV.Element("kd_aktivasi").SetValue(etKdAktv.Text);
-                xmldoc.Save("Y:/Documents/Pemrograman/SMT5/Pemrograman Framework/UTS-KRS/UTS-KRS/xdbPembayaranKelas.xml");
+                xmldoc.Save(Xpath);
                 MessageBox.Show("KRS Teraktivasi");
                 this.Close();
             }
